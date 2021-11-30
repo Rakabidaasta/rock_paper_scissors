@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FirstFragment">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="416dp"
+        android:layout_height="69dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="32dp"
+        android:text="Добро пожаловать в игру камень-ножницы-бумага."
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        tools:layout_editor_absoluteX="3dp"
+        android:layout_width="410dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="36dp"
+        android:text="Выбирай:"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <ImageButton
+        android:id="@+id/scissors"
+        android:layout_width="200px"
+        android:layout_height="200px"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="30dp"
+        android:backgroundTint="#EAEAEA"
+        android:scaleType="centerInside"
+        app:layout_constraintStart_toEndOf="@+id/rock"
+        app:layout_constraintEnd_toStartOf="@+id/paper"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:srcCompat="@drawable/scissors" />
+
+    <ImageButton
+        android:id="@+id/paper"
+        android:layout_width="200px"
+        android:layout_height="200px"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        android:backgroundTint="#EAEAEA"
+        android:scaleType="fitStart"
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/scissors"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:srcCompat="@drawable/paper" />
+
+    <ImageButton
+        android:id="@+id/rock"
+        android:layout_width="200px"
+        android:layout_height="200px"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="29dp"
+        android:layout_marginBottom="32dp"
+        android:backgroundTint="#EAEAEA"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintEnd_toStartOf="@+id/scissors"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:srcCompat="@drawable/rock" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="21dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="414dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="32dp"
+        android:text="Игра"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toTopOf="@+id/choice"
+        app:layout_constraintTop_toBottomOf="@+id/scissors" />
+
+    <ImageView
+        android:id="@+id/choice"
+        android:layout_width="200px"
+        android:layout_height="200px"
+        android:layout_marginTop="96dp"
+        android:layout_marginEnd="44dp"
+        app:layout_constraintEnd_toStartOf="@+id/choiceComp"
+        app:layout_constraintStart_toEndOf="@+id/rock"
+        app:layout_constraintTop_toBottomOf="@+id/scissors"
+        app:srcCompat="@drawable/paper" />
+
+    <ImageView
+        android:id="@+id/choiceComp"
+        android:layout_width="200px"
+        android:layout_height="200px"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toStartOf="@+id/paper"
+        app:layout_constraintStart_toEndOf="@+id/choice"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:srcCompat="@drawable/paper" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Результат: ничья"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/choiceComp" />
+
+    <TextView
+        android:id="@+id/score"
+        android:layout_width="138dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="16dp"
+        android:text="Счёт 0:0"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toTopOf="@+id/button_first"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/result"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+    <Button
+        android:id="@+id/restart_game"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="16dp"
+        android:text="Начать сначала"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/button_first"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/result" />
+
+
+    <Button
+        android:id="@+id/button_first"
+        android:layout_width="143dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="50dp"
+        android:text="Сохранить результат"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

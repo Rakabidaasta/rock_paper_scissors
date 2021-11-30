@@ -1,0 +1,38 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory app:title="@string/messages_header">
+
+        <EditTextPreference
+            android:defaultValue="5"
+            android:key="count_rounds"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="Количество раундов" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/sync_header">
+
+        <SwitchPreferenceCompat
+            app:key="dark_theme"
+            app:defaultValue="false"
+            app:title="@string/sync_title" />
+
+<!--        <SwitchPreferenceCompat-->
+<!--            app:dependency="sync"-->
+<!--            app:key="attachment"-->
+<!--            app:summaryOff="@string/attachment_summary_off"-->
+<!--            app:summaryOn="@string/attachment_summary_on"-->
+<!--            app:title="@string/attachment_title" />-->
+
+    </PreferenceCategory>
+<!--    <PreferenceCategory android:title="Preference category">-->
+
+<!--    </PreferenceCategory>-->
+<!--    <SwitchPreference-->
+<!--        android:defaultValue="false"-->
+<!--        android:key="switch_preference_1"-->
+<!--        android:title="Switch preference" />-->
+
+</PreferenceScreen>
